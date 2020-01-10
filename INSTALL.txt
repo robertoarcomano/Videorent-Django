@@ -1,0 +1,8 @@
+# 1. Create Django startproject
+django-admin startproject Videorent .
+
+# 2. Create apps
+./manage.py startapp Customer
+
+# 3. Start development server
+./manage.py runserver
