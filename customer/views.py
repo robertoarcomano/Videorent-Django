@@ -3,10 +3,10 @@ from customer.models import Customer
 
 def index(request):
     return render(request,
-        'index.html',
+        'customer/index.html',
         {
-            'title': 'title',
-            'bodystart': 'bodystart',
+            'title': 'Customer',
+            'bodystart': 'Customer',
             'customers': Customer.objects.all(),
             'bodystop': 'bodystop',
         }

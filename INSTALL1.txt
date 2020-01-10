@@ -2,12 +2,12 @@
 django-admin startproject Videorent .
 
 # 2. Create apps
-./manage.py startapp Customer
+./manage.py startapp customer
 
 # 3. Start development server
 ./manage.py runserver
 
-# 4. Configure model: Customer/models.py
+# 4. Configure model: customer/models.py
 
 # 5. Add app: Videorent/settings.py
 

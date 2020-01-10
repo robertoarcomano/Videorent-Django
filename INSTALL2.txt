@@ -1,0 +1,12 @@
+# 1. Create apps
+./manage.py startapp article
+
+# 2. Configure model: article/models.py
+
+# 3. Add app: Videorent/settings.py
+
+# 4. Create model
+./manage.py makemigrations article
+
+# 5. Update data on DB
+./manage.py migrate

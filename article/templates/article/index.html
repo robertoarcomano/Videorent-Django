@@ -1,0 +1,20 @@
+<html>
+<title> {{ title }}</title>
+
+<body>
+  {{ bodystart }}
+  <table border=1>
+  <tr>
+    <th>ID</th>
+    <th>NAME</th>
+  </tr>
+  {% for article in articles %}
+    <tr>
+      <td>{{ article.id }}</td>
+      <td>{{ article.name }}</td>
+    </tr>
+  {% endfor %}
+  </table>
+  {{ bodystop }}
+</body>
+</html>
