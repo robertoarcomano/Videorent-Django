@@ -7,7 +7,7 @@ class Customer(models.Model):
         customers.delete()
         customers = []
         for i in range(1,N+1):
-            customer = Customer(name="Customer_"+str(i))
-            customer.save()
-            customers.append(customer);
+            customers.append(Customer(name="Customer_"+str(i)))
+        Customer.objects.bulk_create(customers)
+        customers = Customer.objects.filter(name__contains='Customer_')
         return customers

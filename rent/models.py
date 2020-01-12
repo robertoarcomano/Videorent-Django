@@ -11,9 +11,10 @@ class Rent(models.Model):
     def init(articles, customers):
         rents = Rent.objects.filter(name__contains='Rent_')
         rents.delete()
+        rents = []
         i = 1
         for article in articles:
             for customer in customers:
-                rent = Rent(name="Rent_"+str(i),article=article,customer=customer)
-                rent.save()
+                rents.append(Rent(name="Rent_"+str(i),article=article,customer=customer))
                 i += 1
+        Rent.objects.bulk_create(rents)

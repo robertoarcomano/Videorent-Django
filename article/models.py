@@ -7,7 +7,7 @@ class Article(models.Model):
         articles.delete()
         articles = []
         for i in range(1,N+1):
-            article = Article(name="Article_"+str(i))
-            article.save()
-            articles.append(article)
+            articles.append(Article(name="Article_"+str(i)))
+        Article.objects.bulk_create(articles)
+        articles = Article.objects.filter(name__contains='Article_')
         return articles
