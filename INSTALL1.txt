@@ -16,3 +16,6 @@ django-admin startproject Videorent .
 
 # 7. Update data on DB
 ./manage.py migrate
+
+# 8. Default data
+./manage loaddata customer/customer.json

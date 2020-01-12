@@ -1,0 +1,26 @@
+<html>
+<title> {{ title }}</title>
+
+<body>
+  {{ bodystart }}
+  <table border=1>
+  <tr>
+    <th>ID</th>
+    <th>RENT NAME</th>
+    <th>ARTICLE NAME</th>
+    <th>CUSTOMER NAME</th>
+    <th>RENT DATE</th>
+  </tr>
+  {% for rent in rents %}
+    <tr>
+      <td>{{ rent.id }}</td>
+      <td>{{ rent.name }}</td>
+      <td>{{ rent.article.name }}</td>
+      <td>{{ rent.customer.name }}</td>
+      <td>{{ rent.date }}</td>
+    </tr>
+  {% endfor %}
+  </table>
+  {{ bodystop }}
+</body>
+</html>

@@ -1,0 +1,1 @@
+[{"model": "rent.Rent", "pk": 1, "fields": {"name": "rent1","article_id": 1,"customer_id": 1,"date": "2020-01-01T00:00:00+01:00"}}]
