@@ -7,3 +7,13 @@ class Rent(models.Model):
     article = models.ForeignKey(Article,on_delete=models.CASCADE)
     customer = models.ForeignKey(Customer,on_delete=models.CASCADE)
     date = models.DateTimeField(auto_now=True)
+
+    def init(articles, customers):
+        rents = Rent.objects.filter(name__contains='Rent_')
+        rents.delete()
+        i = 1
+        for article in articles:
+            for customer in customers:
+                rent = Rent(name="Rent_"+str(i),article=article,customer=customer)
+                rent.save()
+                i += 1
